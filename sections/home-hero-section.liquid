@@ -1,0 +1,105 @@
+<section class="mil-banner">
+    <!-- Background Image - Allow customization through theme settings -->
+    <img src="{{ settings.banner_image | img_url: 'original' }}" class="mil-bg-img mil-scale" data-value-1=".4"
+        data-value-2="1.4" alt="image" width="" height="">
+    <div class="mil-overlay"></div>
+    <div class="container">
+        <div class="mil-background-grid mil-top-space"></div>
+        <div class="mil-banner-content">
+            <div class="row align-items-end">
+                <div class="col-xl-7">
+                    <div class="mil-mb-90">
+                        <span class="mil-suptitle mil-light mil-upper mil-mb-60">{{ settings.banner_subtitle }}</span>
+                        <h1 class="mil-upper mil-light mil-mb-60">{{ settings.banner_title }}</h1>
+                        <a href="{{ settings.view_projects_link }}" class="mil-link mil-light mil-upper">View Projects
+                            <span class="mil-arrow"><img src="{{ 'arrow.svg' | asset_url }}" alt="arrow" width=""
+                                    height=""></span></a>
+                    </div>
+                </div>
+                <div class="col-xl-5">
+                    <div class="row mil-mb-60">
+                        <!-- Counter Frames (Static for now, can be dynamic) -->
+                        <div class="col-6">
+                            <div class="mil-counter-frame mil-light mil-mb-30">
+                                <h4 class="mil-accent mil-thin mil-mb-10"><span class="mil-counter" data-number="346">{{
+                                        settings.succeeded_projects_count }}</span>+</h4>
+                                <p class="mil-light">Succeeded <br>Projects</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mil-counter-frame mil-light mil-mb-30">
+                                <h4 class="mil-accent mil-thin mil-mb-10"><span class="mil-counter" data-number="9">{{
+                                        settings.working_hours }}k+</span></h4>
+                                <p class="mil-light">Working <br>Hours</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mil-counter-frame mil-light mil-mb-30">
+                                <h4 class="mil-accent mil-thin mil-mb-10"><span class="mil-counter" data-number="10">{{
+                                        settings.years_experience }}</span>+</h4>
+                                <p class="mil-light">Years <br>Experience</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mil-counter-frame mil-light mil-mb-30">
+                                <h4 class="mil-accent mil-thin mil-mb-10"><span class="mil-counter" data-number="99">{{
+                                        settings.billion_invested }}</span>+</h4>
+                                <p class="mil-light">Billion <br>Invested</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+"name": "Home Hero",
+"settings": [
+{
+"type": "image_picker",
+"id": "banner_image",
+"label": "Banner Image"
+},
+{
+"type": "text",
+"id": "banner_subtitle",
+"label": "Banner Subtitle",
+"default": "Your Subtitle Here"
+},
+{
+"type": "text",
+"id": "banner_title",
+"label": "Banner Title",
+"default": "Your Title Here"
+},
+{
+"type": "url",
+"id": "view_projects_link",
+"label": "Link to View Projects"
+},
+{
+"type": "number",
+"id": "succeeded_projects_count",
+"label": "Succeeded Projects Count"
+},
+{
+"type": "number",
+"id": "working_hours",
+"label": "Working Hours (k)"
+},
+{
+"type": "number",
+"id": "years_experience",
+"label": "Years of Experience"
+},
+{
+"type": "number",
+"id": "billion_invested",
+"label": "Billion Invested"
+}
+]
+}
+{% endschema %}
