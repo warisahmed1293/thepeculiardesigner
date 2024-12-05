@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
-
+    <link href="{{ 'bootstrap.grid.css' | asset_url }}" rel="stylesheet">
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -14,7 +14,7 @@
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
-
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-oP6qKjLqVwQ2xrw1pnCjlgZPV42ldnXO+5pcgchqRf+7zz8kkjwDje4du/k9Zkm0" crossorigin="anonymous">
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -372,6 +372,9 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    
+    <script defer="defer" src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zyANBzGABpCkRkLq3Jk/Jr59fH06vBRtFFs8zQ4v" crossorigin="anonymous"></script>
+  <script defer="defer" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-KJ3o2DKtIkvYIKl8x+7w0g1Hfs/N5u0i5j7I3L3n6ldJJ9zX2yUbWyj64ieJ48" crossorigin="anonymous"></script>
+  <script defer="defer" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0Y78wP5aCkFk3BGRf93ywFV7ocfaPEYgIZ/BeAlxTC3ftz" crossorigin="anonymous"></script>
   </body>
+  
 </html>
