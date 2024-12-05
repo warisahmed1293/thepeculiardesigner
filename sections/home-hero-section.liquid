@@ -12,8 +12,7 @@
                         <span class="mil-suptitle mil-light mil-upper mil-mb-60">{{ settings.banner_subtitle }}</span>
                         <h1 class="mil-upper mil-light mil-mb-60">{{ settings.banner_title }}</h1>
                         <a href="{{ settings.view_projects_link }}" class="mil-link mil-light mil-upper">View Projects
-                            <span class="mil-arrow"><img src="{{ 'arrow.svg' | asset_url }}" alt="arrow" width=""
-                                    height=""></span></a>
+                            </a>
                     </div>
                 </div>
                 <div class="col-xl-5">
@@ -55,79 +54,80 @@
 </section>
 
 {% schema %}
-{
-  "name": "Home Hero Section",
-  "settings": [
     {
-      "type": "image_picker",
-      "id": "banner_image",
-      "label": "Banner Image"
-    },
-    {
-      "type": "text",
-      "id": "banner_subtitle",
-      "label": "Banner Subtitle",
-      "default": "Your Subtitle Here"
-    },
-    {
-      "type": "text",
-      "id": "banner_title",
-      "label": "Banner Title",
-      "default": "Your Title Here"
-    },
-    {
-      "type": "url",
-      "id": "view_projects_link",
-      "label": "Link to View Projects"
-    },
-    {
-      "type": "number",
-      "id": "succeeded_projects_count",
-      "label": "Succeeded Projects Count"
-    },
-    {
-      "type": "number",
-      "id": "working_hours",
-      "label": "Working Hours (k)"
-    },
-    {
-      "type": "number",
-      "id": "years_experience",
-      "label": "Years of Experience"
-    },
-    {
-      "type": "number",
-      "id": "billion_invested",
-      "label": "Billion Invested"
+      "name": "Home Hero",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "banner_image",
+          "label": "Banner Image"
+        },
+        {
+          "type": "text",
+          "id": "banner_subtitle",
+          "label": "Banner Subtitle",
+          "default": "Your Subtitle Here"
+        },
+        {
+          "type": "text",
+          "id": "banner_title",
+          "label": "Banner Title",
+          "default": "Your Title Here"
+        },
+        {
+          "type": "url",
+          "id": "view_projects_link",
+          "label": "Link to View Projects"
+        },
+        {
+          "type": "number",
+          "id": "succeeded_projects_count",
+          "label": "Succeeded Projects Count"
+        },
+        {
+          "type": "number",
+          "id": "working_hours",
+          "label": "Working Hours (k)"
+        },
+        {
+          "type": "number",
+          "id": "years_experience",
+          "label": "Years of Experience"
+        },
+        {
+          "type": "number",
+          "id": "billion_invested",
+          "label": "Billion Invested"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Default",
+          "settings": {
+            "banner_image": "",
+            "banner_subtitle": "Your Subtitle Here",
+            "banner_title": "Your Title Here",
+            "view_projects_link": "https://example.com/projects",
+            "succeeded_projects_count": 100,
+            "working_hours": 500,
+            "years_experience": 10,
+            "billion_invested": 1
+          }
+        },
+        {
+          "name": "Alternate",
+          "settings": {
+            "banner_image": "",
+            "banner_subtitle": "Achieving Greatness Together",
+            "banner_title": "Our Success Story",
+            "view_projects_link": "https://example.com/projects",
+            "succeeded_projects_count": 200,
+            "working_hours": 1000,
+            "years_experience": 15,
+            "billion_invested": 2
+          }
+        }
+      ]
     }
-  ],
-  "presets": [
-    {
-      "name": "Default",
-      "settings": {
-        "banner_image": "",
-        "banner_subtitle": "Your Subtitle Here",
-        "banner_title": "Your Title Here",
-        "view_projects_link": "https://example.com/projects",
-        "succeeded_projects_count": 100,
-        "working_hours": 500,
-        "years_experience": 10,
-        "billion_invested": 1
-      }
-    },
-    {
-      "name": "Alternate",
-      "settings": {
-        "banner_image": "",
-        "banner_subtitle": "Achieving Greatness Together",
-        "banner_title": "Our Success Story",
-        "view_projects_link": "https://example.com/projects",
-        "succeeded_projects_count": 200,
-        "working_hours": 1000,
-        "years_experience": 15,
-        "billion_invested": 2
-      }
-    }
-  ]
-}
-{% endschema %}
+    {% endschema %}
+    
